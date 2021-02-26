@@ -39,7 +39,7 @@ public class TestPage {
 
         new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(header));
 
-        Assert.assertEquals( "Homepage nemá očakávaný titulok.", "Tatrytec.eu", header.getText());
+        Assert.assertEquals( "Homepage nemá očakávaný titulok.", "Tatrytec.euuuuu", header.getText());
     }
 
 
@@ -67,8 +67,6 @@ public class TestPage {
                 .filter(element -> element.getText().equals("Vendelin"))
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
-
-        WebElement error = driver.findElement(By.cssSelector("#error"));
     }
 
 }
