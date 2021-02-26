@@ -37,21 +37,16 @@ public class TestPage {
 
         WebElement header = driver.findElement(By.id("header"));
 
-        Actions actions = new Actions(driver);
-
         new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(header));
 
         Assert.assertEquals( "Homepage nemá očakávaný titulok.", "Tatrytec.eu", header.getText());
-
-        actions.moveToElement(header).build().perform();
-
-        System.out.println(header.findElement(By.id("header-effect")).getCssValue("transform"));
     }
 
 
     public void test2()
     {
         System.out.println("Test 2 is running.");
+
         WebElement h = driver.findElement(By.xpath("//*[@id=\"main\"]/h1[3]"));
 
         new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(h));
@@ -61,6 +56,7 @@ public class TestPage {
     public void test3()
     {
         System.out.println("Test 3 is running.");
+
         WebElement h = driver.findElement(By.xpath("//*[@id=\"main\"]/h1[3]"));
 
         new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(h));
@@ -71,6 +67,8 @@ public class TestPage {
                 .filter(element -> element.getText().equals("Vendelin"))
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
+
+        WebElement error = driver.findElement(By.cssSelector("#error"));
     }
 
 }
