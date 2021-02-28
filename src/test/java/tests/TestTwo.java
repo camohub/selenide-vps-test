@@ -17,20 +17,12 @@ public class TestTwo extends baseTest
     @Test
     public void test() throws InterruptedException
     {
-        try
-        {
-            TestPage testPage = new TestPage(driver);
+        TestPage testPage = new TestPage(driver);
 
-            testPage.openPage();
+        testPage.openPage();
 
-            testPage.test1();
-            testPage.test2();
-            testPage.test3();
-        }
-        catch ( Exception e )
-        {
-            this.testFail = true;
-            throw e;
-        }
+        testPage.test1();
+        testPage.test2();
+        testPage.test3();
     }
 }

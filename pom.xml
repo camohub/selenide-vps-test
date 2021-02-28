@@ -48,12 +48,14 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <!-- library contains utility classes, stream implementations, file filters, file comparators,  -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
             <scope>test</scope>
         </dependency>
+        <!-- Java classes for temporal testing and concurrency -->
         <dependency>
             <groupId>com.google.code.tempus-fugit</groupId>
             <artifactId>tempus-fugit</artifactId>

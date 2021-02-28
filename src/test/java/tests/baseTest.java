@@ -12,7 +12,9 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.Date;
+import java.util.Random;
 
 
 public class baseTest
@@ -36,7 +38,7 @@ public class baseTest
     @After
     public void baseTearDown() throws IOException
     {
-        if( testFail )  makeScreenshot();  // Make screenshot
+        makeScreenshot();  // Make screenshot
 
         driver.close();
         driver.quit();
@@ -57,7 +59,8 @@ public class baseTest
     protected String getScreenshotName()
     {
         String date = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-        String fileName = "./tmp/" + getClass().getName() + "_" + date + "_screenshot.png";
+        Integer rand = new Random().nextInt(10000);
+        String fileName = "./target/screenshots/" + getClass().getSimpleName() + "_" + date + "_" + rand + "_screenshot.png";
 
         return fileName;
     }
