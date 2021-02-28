@@ -32,6 +32,7 @@ public class baseTest
         driver = (new WebDriverService()).getDriver();
 
         failWatcher.setDriver(driver);
+        failWatcher.setTestClass(getClass().getSimpleName());
     }
 
 

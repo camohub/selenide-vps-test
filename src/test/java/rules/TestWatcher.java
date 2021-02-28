@@ -19,10 +19,19 @@ public class TestWatcher extends org.junit.rules.TestWatcher
 
     WebDriver driver;
 
+    // Because of screenshot name
+    String testClass;
+
 
     public void setDriver(WebDriver driver)
     {
         this.driver = driver;
+    }
+
+
+    public void setTestClass(String className)
+    {
+        this.testClass = className;
     }
 
 
@@ -64,7 +73,7 @@ public class TestWatcher extends org.junit.rules.TestWatcher
     {
         String date = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
         int rand = new Random().nextInt(10000);
-        String fileName = "./target/screenshots/" + getClass().getSimpleName() + "_" + date + "_" + rand + "_screenshot.png";
+        String fileName = "./target/screenshots/" + testClass + "_" + date + "_" + rand + "_screenshot.png";
 
         return fileName;
     }
