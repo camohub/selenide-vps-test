@@ -39,7 +39,7 @@ public class TestPage {
 
         new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(header));
 
-        Assert.assertEquals( "Homepage nemá očakávaný titulok.", "Tatrytec.eu", header.getText());
+        Assert.assertEquals( "Homepage nemá očakávaný titulok.", "Tatrytec.euu", header.getText());
     }
 
 
