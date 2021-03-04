@@ -18,3 +18,7 @@ Driver
   @After metoda sa zavolá pred TestWatcher::finish() 
   a zavrie driver pred vytvorením screenshotu.  
 
+Jenkins
+=================
+- Oprávnenia - parent dir projektu musí mať chmod 777 kôli mazaniu v target adresári.
+- Viac v /README.md servera
